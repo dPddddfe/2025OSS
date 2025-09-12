@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week2-assignment#1</title>
+    <link rel="stylesheet" href="file:///var/folders/97/ndlpj3l914l371zk4rv1514r0000gn/T/com.apple.Safari/WebKitDropDestination-YFeT7qSb/style4.css">
+</head>
+
+<style>
+    
+
+    .div_navtop h1{
+        margin-top: 40px;
+        margin-left: 20px;
+        margin-bottom: 0;
+        padding: 0;
+        color: yellowgreen;
+    }
+    .div_navtop p{
+        margin-bottom: 40px;
+        margin-left: 20px;
+        margin-top: 0;
+        padding: 0;
+        color: yellowgreen;
+    }
+
+    /*.div_maincontent{
+        display: flex; 
+    }*/
+
+    ul{
+        list-style:none;
+        padding: 0px;
+    }
+
+
+    .div_leftcontent ul li{
+        
+        width: 150px;
+        padding: 5px;
+        padding-left: 70px;
+        margin-bottom: 5px;
+        margin-right: 10px;
+    }
+
+    .div_leftcontent ul {
+        justify-content: flex-start;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .div_leftcontent a {
+        color: yellowgreen;
+        text-decoration: none;
+    }
+    .div_leftcontent ul a:hover {
+        color: white;
+    }
+    .div_leftcontent ul li.active a{
+        color:white;
+    }
+    .div_centercontent{
+        color: yellowgreen;
+        padding: 5px;
+    }
+    .div_centercontent h1{
+        color: yellowgreen;
+    }
+    .div_centercontent h2{
+        color: yellowgreen;
+    }
+    .div_rightcontent h3{
+        color: yellowgreen;
+    }
+    .div_centercontent a{
+        color: white;
+    }
+    .div_centercontent a:hover{
+        color: yellowgreen;
+    }
+    .div_leftcontent a {
+        color: yellowgreen;
+    }
+
+    .div_rightcontent{
+        color: white;
+        width : 25vw;
+        border: 1px solid white;
+        margin: 10px 5px 10px 10px;
+        padding: 20px;
+        padding-bottom: 40px;
+
+    }
+
+    .div_rightcontent h4{
+        margin: 0px;
+    }
+
+    .div_footer{
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding:5px 10px;
+        margin: 20px;
+        text-align: center;
+    }
+    .div_maincontent2{
+        display: flex;
+        justify-content: space-between;
+    }
+
+</style>
+
+<body>
+    background-color: black;
+
+    <!-- nav top 공간 -->
+    <div class="div_navtop">
+        <h1>Welcome to 정예원's Homepage (22300681)</h1>
+        <p>Use the menu to select different Stylesheets</p>
+    </div>
+
+    <!-- 중간 콘텐츠 공간 -->
+    <div class="div_maincontent">
+        <div class="div_maincontent2">
+            <div class="div_leftcontent">
+                <ul>
+                    <li><a href="./style1.html">• Stylesheet 1</a></li>
+                    <li><a href="./style2.html">• Stylesheet 2</a></li>
+                    <li><a href="./style3.html">• Stylesheet 3</a></li>
+                    <li class="active" ><a href="./style4.html">• Stylesheet 4</a></li>
+                    <li><a href="./index.html">• No Stylesheet</a></li>
+                </ul>
+            </div>
+            <div class="div_rightcontent">   
+                <h3>Side-Bar</h3>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                ut laoreet dolore magna aliquam erat volutpat.
+            </div>
+        </div>
+
+        <div class="div_centercontent">
+            <h1>Same Page Different Stylesheets</h1>
+            <div> This is a demonstration of how different stylesheets can change the layout of your HTML page. You
+            can change the layout of this page by selecting different stylesheets in the menu, or by selecting
+            one of the following links:</div> 
+            <div>
+                <a href="./style1.html">Stylesheet1</a>,
+                <a href="./style2.html">Stylesheet2</a>,
+                <a href="./style3.html">Stylesheet3</a>,
+                <a href="./style4.html">Stylesheet4</a>.
+
+            </div>
+            <h2>No Styles</h2>
+            <div> page uses DIV elements to group different sections of the HTML page. Click here to see how
+            the page looks like with no stylesheet:</div>
+            <div>
+                <a href="file:///var/folders/97/ndlpj3l914l371zk4rv1514r0000gn/T/com.apple.Safari/WebKitDropDestination-Rcep88mW/index.html">No Stylesheet</a>.
+            </div>
+        </div>
+
+    </div>
+    <div class="div_footer">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+    </div>    
+</body>
+</html>
