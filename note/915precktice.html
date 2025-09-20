@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form span{
+        color:red;
+    }
+</style>
+<body>
+    
+    <h2>HTML Forms</h2>
+    <div>사용자 정보 입력</div>
+
+    <!-- 폼 태그 실습 -->
+    <form method="GET" action="form_ok.html"> 
+
+        <label for="input_name"><span>*</span>이름 : </label>
+        <input type="text" id="input_name" name="name"/> <br/>
+
+        <div>
+            <label for="input_type_passowrd"></label><span>*</span>비밀번호 : </label><br/>
+            <input type="password" name="input_password" id="input_type_password"  placeholder="4자 이상 적어주세요"/>
+        </div>
+        <label for="input_phone">핸드폰번호 :</label> <input type="text" id="input_phone" name="phone" placeholder="00*-000*-0000" /> <br/>
+
+        <div>
+            성별 :    
+            <input type="radio" name="input_radio" id="input_type_radio_1" />
+            <label for="input_type_radio_1">남</label>
+            <input type="radio" name="input_radio" id="input_type_radio_2" />
+            <label for="input_type_radio_2">여</label>
+        </div>
+
+
+
+        <div>
+            취미:    
+            <input type="checkbox" name="input_checkbox1" id="input_type_checkbox_1" />
+            <label for="input_type_checkbox_1">영화감상</label>
+            <input type="checkbox" name="input_checkbox2" id="input_type_checkbox_2" />
+            <label for="input_type_checkbox_2">독서</label>
+            <input type="checkbox" name="input_checkbox2" id="input_type_checkbox_2" />
+            <label for="input_type_checkbox_2">스포츠</label>
+        </div>
+
+        <input type="submit" value="제출"/>
+        <input type="reset" value="새로 입력"/>
+    </form>
+
+</body>
+</html>

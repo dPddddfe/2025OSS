@@ -1,0 +1,267 @@
+body {
+    background-color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+}
+
+
+.div_top {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 20px;
+
+}
+
+.div_top div {
+    font-size: 14px;
+    color: #666;
+    margin: 20px;
+}
+
+.div_top h1 {
+    font-size: 32px;
+    color: #000;
+    margin: 80px;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+/* --- 3. 탭 메뉴 (사업 제휴 제안 / 기프트 카드) --- */
+
+.div_choicetitle{
+    display: flex;
+    justify-content: flex-start;
+}
+.div_choicetitle .div_choicetitle_left{
+    display: flex;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: greenyellow;
+    margin: 10px;
+    margin-top: 20px;
+}
+.div_choicetitle .div_choicetitle_right{
+    display: flex;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: white;
+    margin: 10px;
+    margin-top: 20px;
+    border: 1px solid lightgrey;
+    color: #666;
+}
+
+
+/* --- 4. 안내 박스 (! 작성전 확인해주세요!) --- */
+.div_information {
+    background-color: whitesmoke;
+    padding: 5px;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+.div_information h3 {
+
+    display: flex;
+    color: greenyellow;
+    font-size: 18px;
+    margin:15px;
+}
+
+.div_information li {
+    color: #666;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+
+/* --- 5. 폼 섹션 (h2 제목, *필수입력) --- */
+
+/* <br class="main1"> 태그를 섹션 구분선으로 활용 */
+br.main1, br.main3 {
+    display: block;
+    content: '';
+    margin-top: 30px; /* 섹션 사이 간격 */
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+/* 폼 섹션 제목 (h2) */
+h2 {
+    font-size: 24px;
+    color: #111;
+    margin-top: 120px;
+    margin-bottom: 10px;
+}
+
+/* "* 필수입력" 텍스트 */
+div:has(+ br.main1),
+div:has(+ br.main3) {
+    color: lawngreen; /* 필수입력 빨간색 */
+    font-size: 14px;
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* 필드 제목 (h3) */
+h3[for] {
+    font-size: 18px;
+    margin: 25px 0 12px 0;
+}
+
+/* 필수입력 별표 (*) */
+h3 span, label span {
+    color: lawngreen;
+    margin-left: 4px;
+}
+
+/* --- 6. 폼 필드 (input, radio, textarea) --- */
+
+/* 라디오 버튼 그룹 (가로 정렬) */
+.main1_select1 label,
+.main2_select1 label {
+    margin-right: 25px; /* 옵션 사이 간격 */
+    font-size: 16px;
+    cursor: pointer;
+}
+.main1_select1 input[type="radio"],
+.main2_select1 input[type="radio"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* 텍스트 입력창 (input, textarea) */
+input[type="text"],
+input[type="phone"],
+input[type="email"],
+textarea {
+    width: 100%; /* 꽉 채우기 */
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 5px;
+    box-sizing: border-box; /* 패딩이 너비를 밀어내지 않도록 */
+}
+
+/* 플레이스홀더(안내문구) 스타일 */
+::placeholder {
+    color: #aaa;
+}
+
+/* 텍스트 영역 (textarea) */
+textarea {
+    min-height: 150px; /* 최소 높이 */
+    resize: vertical; /* 세로로만 크기 조절 허용 */
+}
+
+/* 필드 하단 안내 문구 */
+.inf {
+    color: #777;
+    font-size: 13px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* --- 7. 파일 첨부 (input[type="file"]) --- */
+
+/* 기본 파일 버튼 스타일 변경 */
+input[type="file"] {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* "파일 선택" 버튼 꾸미기 (찾아보기 버튼) */
+input[type="file"]::file-selector-button {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    background-color: #333;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #555;
+}
+
+
+/* --- 8. 하단 법률 고지 및 동의 --- */
+.title { /* h2.title */
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* 안내 문구 본문 */
+.body1, .body1-1, .body1-2, .body2 {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.body1-1 { font-weight: bold; }
+.body1-2 { color: lawngreen; font-weight: bold; }
+
+/* 유의사항의 내부 리스트 */
+.body3 li {
+    list-style-type: '• ';
+    padding-left: 8px;
+    margin-left: 15px;
+    color: #777;
+}
+
+/* 체크박스 영역 (회색 배경) */
+div:has(> input[type="checkbox"]) {
+    margin-top: 20px;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+div:has(> input[type="checkbox"]) label {
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+div:has(> input[type="checkbox"]) input {
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+}
+
+/* --- 9. 제출하기 버튼 --- */
+input[type="submit"] {
+    display: block; /* 가운데 정렬을 위해 block으로 변경 */
+    margin: 50px auto 0 auto; /* 위쪽 여백 + 중앙 정렬 */
+    width: 220px;
+    padding: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+}
