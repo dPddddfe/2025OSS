@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /* div.example{
+            font-size: 50px;
+            background-color: aqua;
+        } */
+        @media only screen and (max-width: 475px){
+            div.example{
+                font-size: 30px;
+                background-color: purple;
+            }
+        }
+        @media only screen and (max-width: 700px) and (min-width:476px){
+            div.example2{
+                font-size: 40px;
+                background-color: green;
+            }
+        }
+        @media only screen and (min-width:701px){
+            div.example2{
+                font-size: 40px;
+                background-color: yellow;
+            }
+        }
+    </style>
+    <div class="example">exemple</div>
+    475 이하일 때 글씨 크기 30px / 배경색 보라색
+    476부터 700까지 글씨크기 40px / 배경색 초록색
+    700 이상일 때 글씨크기 50px / 배경색 노란색
+
+    <script>
+        let width = window.innerWidth
+        let width2 = $(document).width();
+        console.log(width);
+        console.log(width2);
+        if(width > 700){
+            $(".exemple").addClass(".exemple3");
+        }else if(width > 475){
+            $(".exemple").addClass(".exemple2");
+        }
+        else{
+            $(".exemple").addClass(".exemple1");
+        }
+    </script>
+</body>
+</html>
