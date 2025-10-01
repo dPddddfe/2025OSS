@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>강의 추가 페이지</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="my.css">
+</head>
+<body>
+  <div class="add-class-page">
+    <h2>📝  강의 추가</h2>
+    <p>추가할 강의 정보를 입력해주세요</p>
+  </div>
+  
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Home</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="add.html"><span class="glyphicon glyphicon-plus"></span> 강의 추가</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <form class="custom-form" id="add-form">
+    <div class="form-group">
+      <label for="class-name">과목 명:</label>
+      <input type="text" class="form-control" id="class-name" placeholder="ex. 오픈소스 스튜디오">
+    </div>
+    <div class="form-group">
+        <label for="class-code">과목 코드:</label>
+        <input type="text" class="form-control" id="class-code" placeholder="ex. ECE20026">
+    </div>
+    <div class="form-group">
+      <label for="professor">담당 교수:</label>
+      <input type="text" class="form-control" id="professor" placeholder="김세진 교수님">
+    </div>
+    <div class="form-group">
+        <label for="class-major">주관 학부:</label>
+          <input type="text" class="form-control" id="class-major" placeholder="ex. 전산전자공학부">
+    </div>
+    <div class="form-group">
+      <label for="credits">학점:</label>
+      <input type="number" class="form-control" id="credits" placeholder="1~4 사이의 숫자를 입력하세요">
+    </div>
+    <div class="form-group">
+        <label for="class-place">강의 장소:</label>
+        <input type="text" class="form-control" id="class-place" placeholder="ex. NTH 313">
+    </div>
+    <div class="form-group">
+      <label for="class-time">강의 시간:</label>
+      <input type="text" class="form-control" id="class-time" placeholder="월1, 목1, 목2">
+    </div>
+    <div class="form-group">
+        <label for="grade">성적:</label>
+        <select class="form-control" id="grade">
+            <option value="" selected disabled>-- 성적을 선택하세요 --</option>
+            <option value="A+">A+</option>
+            <option value="A0">A0</option>
+            <option value="B+">B+</option>
+            <option value="B0">B0</option>
+            <option value="C+">C+</option>
+            <option value="C0">C0</option>
+            <option value="D+">D+</option>
+            <option value="D0">D0</option>
+            <option value="P">P</option>
+            <option value="F">F</option>
+        </select>
+    </div>
+
+    <div class="form-group buttons">
+      <button type="submit" class="btn btn-primary">확인</button>
+      <a href="index.html" class="btn btn-default">취소</a>
+    </div>
+  </form>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script>
+    const coursesData = [];
+
+    const form = document.querySelector('#add-form');
+    const classNameInput = document.querySelector('#class-name');
+    const classCodeInput = document.querySelector('#class-code');
+    const professorInput = document.querySelector('#professor');
+    const MajorInput = document.querySelector('#class-major');
+    const creditsInput = document.querySelector('#credits');
+    const placeInput = document.querySelector('#class-place');
+    const classTimeInput = document.querySelector('#class-time');
+    const gradeInput = document.querySelector('#grade');
+
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+        const classNameValue = classNameInput.value.trim();
+        const professorValue = professorInput.value.trim();
+        const creditsValue = creditsInput.value;
+        const classTimeValue = classTimeInput.value.trim();
+      
+      // --- 과제 요구사항에 맞는 4가지 유효성 검사 ---
+      if(classNameInput.value.trim() === ''){
+        alert('과목명을 입력해주세요.');
+        return; 
+      }
+      if(classCodeInput.value.trim() === ''){
+        alert('과목코드를 입력해주세요.');
+        return; 
+      }
+      if(professorInput.value.trim() === ''){
+        alert('담당 교수명을 입력해주세요.');
+        return; 
+      }
+      if(MajorInput.value.trim() === ''){
+        alert('주관 학부를 입력해주세요.');
+        return; 
+      }
+      const credits = creditsInput.value;
+      if (credits === '' || isNaN(credits) || credits < 1 || credits > 4) {
+        alert('학점은 1~4 사이의 숫자로 입력해주세요.');
+        return;
+      }
+      if(placeInput.value.trim() === ''){
+        alert('강의 시간을 입력해주세요.');
+        return;
+      }
+      
+      if(classTimeInput.value.trim() === ''){
+        alert('강의 시간을 입력해주세요.');
+        return;
+      }
+      const newCourse = {
+            name: classNameValue,
+            code: classCodeInput.value.trim(),
+            professor: professorValue,
+            major: MajorInput.value.trim(),
+            credits: creditsValue,
+            place: placeInput.value.trim(),
+            time: classTimeValue,
+            grade: gradeInput.value
+      };
+      coursesData.push(newCourse);
+      
+
+      alert('게시물이 추가됩니다');
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>

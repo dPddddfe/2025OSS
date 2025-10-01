@@ -1,0 +1,186 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+.jumbotron {
+  margin-bottom: 0;
+  background-color: lightblue;
+  color: white;
+}
+
+
+.navbar {
+  margin-bottom: 20px;
+  border-radius: 0;
+}
+
+.table>tbody>tr>td>a {
+    font-weight: bold;
+    color: #333;
+}
+.table>tbody>tr>td>a:hover {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+
+  .table-responsive {
+    border: none;
+  }
+  .table thead {
+    display: none;
+  }
+
+  .table tbody tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+  }
+
+  .table tbody td {
+    display: block;
+    text-align: right;
+    padding: 8px;
+    border-bottom: 1px dotted #ccc;
+  }
+
+  .table tbody td:last-child {
+    border-bottom: none;
+  }
+
+  .table tbody td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-align: left;
+  }
+  .custom-form .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .custom-form label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .custom-form .buttons {
+    padding-left: 0;
+  }
+
+  .name {
+    font-size: 28px;
+  }
+  .Qua, .ans {
+    font-size: 20px;
+  }
+}
+
+/*add.html*/
+.add-class-page{
+    font-size: 15px;
+    text-align: center;
+}
+.add-class-page h2{
+    margin-bottom: 0;
+    margin-top: 0;
+    background-color: lightblue;
+    color: white;
+    padding: 5%;
+    padding-bottom: 2%;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+.add-class-page p{
+    margin-bottom: 0;
+    background-color: lightblue;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    padding: 5%;
+
+}
+
+.custom-form {
+  max-width: 500px;
+  margin: 2px;
+  margin-left: 32%;
+  white-space: nowrap;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.custom-form .label {
+  text-align: left;
+  white-space: nowrap;
+}
+
+
+.buttons {
+    padding-left: 170px; 
+}
+
+
+/*view.html*/
+
+.detail-class-page{
+  font-size: 15px;
+  text-align: center;
+}
+.detail-class-page h2{
+  margin-bottom: 0;
+  margin-top: 0;
+  background-color: lightblue;
+  color: white;
+  padding: 5%;
+  padding-bottom: 2%;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+.detail-class-page p{
+  margin-bottom: 0;
+  background-color: lightblue;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  padding: 5%;
+
+}
+
+.name{
+  margin-left: 10%;
+  color: darkblue;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.Qua{
+  margin-left: 10%;
+  color: darkcyan;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: beige;
+  margin-right: 0;
+}
+
+.ans{
+  color: gray;
+  font-size: 30px;
+  font-weight: bold;
+  border: 1px solid beige ;
+  margin-left: 0;
+}
